@@ -1,0 +1,104 @@
+.notices-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: "Montserrat", sans-serif;
+  color: #faedca;
+  background: #1a1a1a;
+  min-height: 100vh;
+}
+.notices-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fe5d26;
+  margin-bottom: 40px;
+}
+.notices-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+.notice-card {
+  background: #222222;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(254, 93, 38, 0.10);
+  padding: 2.2rem 2.5rem 2rem 2.5rem;
+  min-width: 320px;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1.5px solid #2a2a2a;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.notice-badge {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  background: linear-gradient(to right, #fe5d26, #d84e1d);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 0.3rem 1.1rem;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(254, 93, 38, 0.13);
+  margin-bottom: 1.2rem;
+}
+.notice-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fe5d26;
+  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+}
+.notice-desc {
+  font-size: 1.13rem;
+  margin-bottom: 1.1rem;
+  color: #faedca;
+  opacity: 0.97;
+  line-height: 1.6;
+}
+.notice-meta {
+  font-size: 1.01rem;
+  color: #f2c078;
+  margin-bottom: 0.3rem;
+  margin-top: 0.2rem;
+}
+.notice-badge.low {
+  background: #7ebc89;
+}
+.notice-badge.medium {
+  background: #f2c078;
+  color: #222222;
+}
+.notice-badge.high {
+  background: linear-gradient(to right, #fe5d26, #d84e1d);
+}
+.notice-valid {
+  color: #fe5d26;
+  font-weight: 600;
+  margin-top: 0.3rem;
+  font-size: 1.05rem;
+}
+@media (max-width: 900px) {
+  .notices-container {
+    padding: 40px 8px;
+  }
+  .notice-card {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    min-width: 90vw;
+    max-width: 98vw;
+  }
+}
+@media (max-width: 600px) {
+  .notices-container h2 {
+    font-size: 2rem;
+  }
+  .notice-card {
+    padding: 1rem 0.2rem 0.7rem 0.2rem;
+  }
+} 

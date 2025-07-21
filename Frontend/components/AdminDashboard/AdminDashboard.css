@@ -1,0 +1,238 @@
+/* Admin Dashboard Container */
+.admin-dashboard {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: "Montserrat", sans-serif;
+  color: #faedca;
+  background: #1a1a1a;
+  min-height: 100vh;
+}
+.tab-buttons {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+.tab-buttons button {
+  background: #222222;
+  color: #faedca;
+  border: 2px solid #fe5d26;
+  border-radius: 8px;
+  padding: 0.7rem 1.7rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  outline: none;
+}
+.tab-buttons button.active {
+  background: linear-gradient(to right, #fe5d26, #d84e1d);
+  color: #fff;
+  border: 2px solid #fe5d26;
+  box-shadow: 0 2px 8px rgba(254, 93, 38, 0.13);
+}
+.tab-buttons button:hover:not(.active) {
+  background: #2a2a2a;
+  color: #fe5d26;
+}
+form, .club-form {
+  background: #222222;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(254, 93, 38, 0.10);
+  padding: 2.2rem 2.5rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  margin-bottom: 2.5rem;
+  border: 1.5px solid #2a2a2a;
+}
+.form-group label {
+  color: #f2c078;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 1.08rem;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.6rem 1.1rem;
+  border: 1.5px solid #fe5d26;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: #faedca;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  margin-top: 0.2rem;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #f2c078;
+}
+.form-group textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+.submit-btn, form button[type="submit"] {
+  background: linear-gradient(to right, #fe5d26, #d84e1d);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.7rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(254, 93, 38, 0.13);
+  margin-top: 1.2rem;
+  width: 100%;
+  text-align: center;
+}
+.submit-btn:disabled, form button[type="submit"]:disabled {
+  background: #444;
+  color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.submit-btn:hover:not(:disabled), form button[type="submit"]:hover:not(:disabled) {
+  background: linear-gradient(to right, #fe7d26, #fe5d26);
+  transform: translateY(-2px) scale(1.04);
+}
+.message {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #7ebc89;
+}
+.error {
+  color: #e74c3c;
+  font-weight: 500;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .admin-dashboard {
+    padding: 40px 8px;
+  }
+  form, .club-form {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .admin-dashboard {
+    padding: 20px 2px;
+  }
+  form, .club-form {
+    padding: 1rem 0.2rem 0.7rem 0.2rem;
+  }
+}
+
+.pending-requests-tab {
+  margin-top: 2rem;
+}
+.pending-clubs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+.pending-club-card {
+  background: #222222;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(254, 93, 38, 0.10);
+  padding: 1.7rem 2.2rem 1.2rem 2.2rem;
+  min-width: 320px;
+  max-width: 500px;
+  width: 100%;
+  border: 1.5px solid #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.pending-club-card h3 {
+  color: #fe5d26;
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 0.7rem;
+}
+.pending-request-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.08rem;
+}
+.pending-request-item span {
+  color: #f2c078;
+  font-weight: 600;
+}
+.approve-btn, .reject-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(254, 93, 38, 0.13);
+}
+.approve-btn {
+  background: linear-gradient(to right, #27ae60, #219150);
+  color: #fff;
+}
+.approve-btn:hover {
+  background: linear-gradient(to right, #2ecc71, #27ae60);
+  transform: translateY(-2px) scale(1.04);
+}
+.reject-btn {
+  background: linear-gradient(to right, #e74c3c, #c0392b);
+  color: #fff;
+}
+.reject-btn:hover {
+  background: linear-gradient(to right, #c0392b, #e74c3c);
+  transform: translateY(-2px) scale(1.04);
+}
+/* File input styling */
+.form-group input[type="file"] {
+  display: none;
+}
+.custom-file-label {
+  display: inline-block;
+  background: linear-gradient(to right, #fe5d26, #d84e1d);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 1.3rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(254, 93, 38, 0.13);
+}
+.custom-file-label:hover {
+  background: linear-gradient(to right, #fe7d26, #fe5d26);
+  transform: translateY(-2px) scale(1.04);
+}
+.selected-file-name {
+  color: #f2c078;
+  font-size: 0.98rem;
+  margin-left: 0.7rem;
+}
+@media (max-width: 900px) {
+  .pending-club-card {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    min-width: 90vw;
+    max-width: 98vw;
+  }
+}
+@media (max-width: 600px) {
+  .pending-club-card {
+    padding: 1rem 0.2rem 0.7rem 0.2rem;
+  }
+}

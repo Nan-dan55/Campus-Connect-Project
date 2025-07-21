@@ -1,0 +1,225 @@
+/* General styles */
+header {
+  background-color: #1a1a1a; /* Dark background */
+  color: #fe5d26; /* Primary accent color */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 10px 60px;
+  height: 75px;
+  font-family: "Montserrat", sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fe5d26;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(254, 93, 38, 0.3);
+}
+
+.navbar-container_3050 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 40px;
+}
+
+.nav-links_3050 {
+  margin: 0 auto;
+}
+
+.nav-links_3050 ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links_3050 ul li a {
+  text-decoration: none;
+  color: #faedca; /* Cream text color */
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+  font-size: 17px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+}
+
+.nav-links_3050 ul li a:hover {
+  color: #f2c078; /* Light orange on hover */
+  background: rgba(254, 93, 38, 0.1);
+}
+
+.login-btn_3050 {
+  cursor: pointer;
+  padding: 10px 25px;
+  font-size: 17px;
+  font-weight: 600;
+  background: linear-gradient(to right, #fe5d26, #d84e1d);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(254, 93, 38, 0.3);
+}
+
+.login-btn_3050:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(254, 93, 38, 0.4);
+}
+
+.navbar-menu-icon_3050 {
+  font-size: 34px;
+  display: none;
+  cursor: pointer;
+  color: #fe5d26;
+  transition: all 0.3s ease;
+}
+
+.navbar-menu-icon_3050:hover {
+  transform: scale(1.1);
+}
+
+.navbar-close-icon_3050 {
+  display: none;
+  font-size: 34px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 100;
+  color: #fe5d26;
+  transition: all 0.3s ease;
+}
+
+.navbar-close-icon_3050:hover {
+  transform: rotate(90deg);
+}
+
+.link-style_3050 li a {
+  position: relative;
+}
+
+.link-style_3050 li a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  background-color: #f2c078; /* Light orange accent */
+  transition: all 0.3s ease-out;
+}
+
+.link-style_3050 li a:hover::before {
+  width: 120%;
+}
+
+@media (max-width: 1000px) {
+  header {
+    padding: 10px 30px;
+  }
+
+  .nav-links_3050 ul {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    position: relative;
+  }
+
+  .navbar-container_3050 {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 300px;
+    background-color: #1a1a1a;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+    transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+    padding-top: 80px;
+  }
+
+  .navbar-container_3050.active_3050 {
+    right: 0;
+  }
+
+  .navbar-container_3050 ul {
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .nav-links_3050 ul li {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .nav-links_3050 ul li a {
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+  }
+
+  .navbar-menu-icon_3050 {
+    display: block;
+  }
+
+  .navbar-close-icon_3050 {
+    display: block;
+  }
+
+  .login-btn_3050,
+  .logout-btn_3050 {
+    width: 80%;
+    padding: 12px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+}
+
+.logout-btn_3050 {
+  background: linear-gradient(to right, #ff6b6b, #ff4d4d);
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 17px;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(255, 77, 77, 0.3);
+}
+
+.logout-btn_3050:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(255, 77, 77, 0.4);
+}
+
+.nav-icon_3050 {
+  font-size: 1.4rem;
+  color: #f2c078; /* Light orange icons */
+}
+
+.profile-icon_3050 {
+  font-size: 1.4rem;
+  color: #f2c078; /* Light orange icons */
+}

@@ -1,0 +1,190 @@
+.notes-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: "Montserrat", sans-serif;
+  color: #faedca;
+  background: #1a1a1a;
+  min-height: 100vh;
+}
+.notes-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fe5d26;
+  margin-bottom: 40px;
+}
+.notes-filter-bar {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.notes-filter-bar label {
+  font-size: 1.1rem;
+  color: #faedca;
+}
+.notes-filter-bar select {
+  margin-left: 0.5rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 8px;
+  border: 1.5px solid #fe5d26;
+  background: #222222;
+  color: #faedca;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.notes-filter-bar select:focus {
+  border-color: #f2c078;
+}
+.notes-upload-section {
+  background: #222222;
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
+  border-radius: 16px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 16px rgba(254, 93, 38, 0.10);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.notes-upload-section h3 {
+  color: #fe5d26;
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.notes-upload-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.notes-upload-form input[type="text"],
+.notes-upload-form input[type="url"],
+.notes-upload-form select {
+  padding: 0.5rem 1.1rem;
+  border: 1.5px solid #fe5d26;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: #faedca;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.notes-upload-form input:focus,
+.notes-upload-form select:focus {
+  border-color: #f2c078;
+}
+.notes-upload-form button {
+  background: linear-gradient(to right, #fe5d26, #d84e1d);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(254, 93, 38, 0.13);
+}
+.notes-upload-form button:disabled {
+  background: #b3d1f7;
+  cursor: not-allowed;
+}
+.notes-upload-form button:hover {
+  background: linear-gradient(to right, #fe7d26, #fe5d26);
+  transform: translateY(-2px) scale(1.04);
+}
+.upload-msg {
+  margin-top: 0.7rem;
+  color: #7ebc89;
+  font-weight: 500;
+  text-align: center;
+}
+.notes-list-section {
+  margin-top: 2rem;
+}
+.notes-list-section h3 {
+  color: #fe5d26;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.notes-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+.note-item {
+  background: #2a2a2a;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(254, 93, 38, 0.08);
+  padding: 1.2rem 1.5rem;
+  min-width: 320px;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: flex-start;
+  border: 1.5px solid #222;
+}
+.note-title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #fe5d26;
+  margin-bottom: 0.2rem;
+}
+.note-meta {
+  color: #f2c078;
+  font-size: 0.98rem;
+  margin-bottom: 0.2rem;
+}
+.download-link {
+  background: linear-gradient(to right, #fe5d26, #d84e1d);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.35rem 1.1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-top: 0.3rem;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(254, 93, 38, 0.13);
+  display: inline-block;
+}
+.download-link:hover {
+  background: linear-gradient(to right, #fe7d26, #fe5d26);
+  transform: translateY(-2px) scale(1.04);
+}
+.error {
+  color: #e74c3c;
+  font-weight: 500;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .notes-container {
+    padding: 40px 8px;
+  }
+  .notes-upload-section {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+  .note-item {
+    min-width: 90vw;
+    max-width: 98vw;
+  }
+}
+@media (max-width: 600px) {
+  .notes-container h2 {
+    font-size: 2rem;
+  }
+  .notes-upload-section {
+    padding: 1rem 0.2rem 0.7rem 0.2rem;
+  }
+} 
