@@ -78,22 +78,22 @@ const Navbar = ({ isLoggedIn, onLogout, userRole }) => {
             {isLoggedIn && userRole === 'no' && (
               <>
                 <li>
-                  <Link to="/events">
+                  <Link to="/events" onClick={() => setIsOpen(false)}>
                     <BiCalendar className="nav-icon_3050" /> Events
                   </Link>
                 </li>
                 <li>
-                  <Link to="/notices">
+                  <Link to="/notices" onClick={() => setIsOpen(false)}>
                     <BiNews className="nav-icon_3050" /> Notices
                   </Link>
                 </li>
                 <li>
-                  <Link to="/notes">
+                  <Link to="/notes" onClick={() => setIsOpen(false)}>
                     <BiBook className="nav-icon_3050" /> Notes
                   </Link>
                 </li>
                 <li>
-                  <Link to="/clubs">
+                  <Link to="/clubs" onClick={() => setIsOpen(false)}>
                     <BiGroup className="nav-icon_3050" /> Clubs
                   </Link>
                 </li>
@@ -102,12 +102,12 @@ const Navbar = ({ isLoggedIn, onLogout, userRole }) => {
             {isLoggedIn && userRole === 'yes' && (
               <>
                 <li>
-                  <Link to="/admin/dashboard" onClick={handleAdminClick_3050}>
+                  <Link to="/admin/dashboard" onClick={(e) => { handleAdminClick_3050(); setIsOpen(false); }}>
                     <BiCog className="profile-icon_3050" /> Admin
                   </Link>
                 </li>
                 <li>
-                  <Link to="/notes">
+                  <Link to="/notes" onClick={() => setIsOpen(false)}>
                     <BiBook className="nav-icon_3050" /> Notes
                   </Link>
                 </li>
