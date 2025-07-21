@@ -1,1 +1,1 @@
-export const BASE_URL = "http://localhost:3000";
+export const BASE_URL = "https://campus-connect-project-p30n.onrender.com";
