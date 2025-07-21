@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors({
-  origin: ['http://localhost:5173'],
+  origin: ['https://campus-connect-project-beta.vercel.app', 'http://localhost:5173'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
