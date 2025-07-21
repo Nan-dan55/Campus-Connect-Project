@@ -97,11 +97,6 @@ const Navbar = ({ isLoggedIn, onLogout, userRole }) => {
                     <BiGroup className="nav-icon_3050" /> Clubs
                   </Link>
                 </li>
-                <li>
-                  <Link to="/profile" onClick={handleProfileClick_3050}>
-                    <BiUser className="profile-icon_3050" /> Profile
-                  </Link>
-                </li>
               </>
             )}
             {isLoggedIn && userRole === 'yes' && (
